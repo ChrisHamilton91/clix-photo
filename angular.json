@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "clix-photo:build:production",
+            "firebaseProject": "clix-photo",
+            "firebaseHostingSite": "clix-photo"
+          }
         }
       }
     }

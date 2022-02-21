@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "clix-photo": {
+      "hosting": {
+        "clix-photo": [
+          "clix-photo"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "clix-photo"
+  }
+}
