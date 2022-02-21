@@ -111,7 +111,7 @@
             "ssr": false,
             "browserTarget": "clix-photo:build:production",
             "firebaseProject": "clix-photo",
-            "firebaseHostingSite": "clix-photo"
+            "firebaseHostingSite": "clixphoto"
           }
         }
       }
