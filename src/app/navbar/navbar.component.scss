@@ -32,11 +32,12 @@ $logo-left: 32px;
   box-shadow: 0 0 2px 2px black inset, 2px 2px 6px black;
   overflow: hidden;
   cursor: pointer;
-  transition: left 1s;
+  transition: left 1s, transform 1s;
 }
 
 .logo-container.hidden {
   left: calc(-#{$logo-size} - #{$logo-left});
+  transform: rotate(-120deg);
 }
 
 .logo {
