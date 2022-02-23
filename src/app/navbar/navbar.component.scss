@@ -46,7 +46,7 @@ $logo-left: 32px;
 .flex-container {
   display: flex;
   align-items: center;
-  margin-left: 8rem;
+  margin-left: calc(#{$logo-left} + #{$logo-size});
 }
 
 .navlink-line {
