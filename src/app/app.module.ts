@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ImgFallbackModule } from 'ngx-img-fallback';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { firebaseConfig } from 'src/environments/firebaseConfig';
@@ -20,6 +21,7 @@ import { firebaseConfig } from 'src/environments/firebaseConfig';
     AngularFireModule.initializeApp(firebaseConfig),
     ImgFallbackModule,
     LayoutModule,
+    ScrollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

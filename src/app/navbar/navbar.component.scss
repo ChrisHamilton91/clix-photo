@@ -9,6 +9,13 @@
   position: fixed;
   width: 100%;
   border-bottom: 1px solid black;
+  transition: background-color 0.5s, border-color 0.5s, color 1.5s;
+}
+
+.container.transparent {
+  background-color: transparent;
+  border-color: transparent;
+  color: $font-black;
 }
 
 .flex-container {
@@ -18,10 +25,15 @@
 }
 
 .navlink-line {
-  border-left: 1px solid $font-gray;
+  border-left: 1px solid $dark-gray;
   display: inline-block;
   height: 2rem;
   margin: 0 16px;
+  transition: border-color 1.5s;
+}
+
+.navlink-line.dark {
+  border-color: $font-black;
 }
 
 .navlink-text {
