@@ -1,4 +1,8 @@
 <div class="container" [class.transparent]="transparent">
+  <div class="logo-container" [class.hidden]="transparent">
+    <img class="logo" src="assets/round-eye-logo.png" />
+  </div>
+  <!-- Desktop -->
   <div class="flex-container" *ngIf="!(condensed$ | async)">
     <span class="navlink-text">PORTFOLIO</span>
     <span class="navlink-line" [class.dark]="transparent"></span>
@@ -16,6 +20,8 @@
     <span class="navlink-line" [class.dark]="transparent"></span>
     <span class="navlink-text login-button">SIGN UP / LOGIN</span>
   </div>
+
+  <!-- Condensed -->
   <div class="flex-container" *ngIf="condensed$ | async">
     <span class="flex-spacer"></span>
     <span class="navlink-text login-button">SIGN UP / LOGIN</span>

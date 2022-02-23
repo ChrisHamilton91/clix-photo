@@ -18,10 +18,35 @@
   color: $font-black;
 }
 
+$logo-size: 6rem;
+$logo-left: 32px;
+.logo-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: $logo-left;
+  width: $logo-size;
+  height: $logo-size;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px black inset, 2px 2px 6px black;
+  overflow: hidden;
+  cursor: pointer;
+  transition: left 1s;
+}
+
+.logo-container.hidden {
+  left: calc(-#{$logo-size} - #{$logo-left});
+}
+
+.logo {
+  width: 100%;
+}
+
 .flex-container {
   display: flex;
   align-items: center;
-  margin-left: 135px;
+  margin-left: 8rem;
 }
 
 .navlink-line {
