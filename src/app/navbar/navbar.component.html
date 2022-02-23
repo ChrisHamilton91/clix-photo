@@ -1,6 +1,10 @@
 <div class="container" [class.transparent]="transparent">
   <div class="logo-container" [class.hidden]="transparent">
-    <img class="logo" src="assets/round-eye-logo.png" />
+    <img
+      class="logo"
+      src="https://storage.googleapis.com/clixphoto-assets/round-eye-logo.png"
+      src-fallback="assets/round-eye-logo.png"
+    />
   </div>
   <!-- Desktop -->
   <div class="flex-container" *ngIf="!(condensed$ | async)">
