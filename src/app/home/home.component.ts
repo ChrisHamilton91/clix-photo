@@ -1,12 +1,6 @@
 import { ScrollDispatcher } from '@angular/cdk/scrolling';
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
-import { map, Observable, Subscription } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { NavbarService } from '../navbar/navbar.service';
 
 @Component({
@@ -24,7 +18,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     //Navbar transparent at first
-    this.updateNavbar();
+    this.navbar.transparent$.next(true);
     //Make navbar appear when scrolled down far enough
     this.subs.add(this.scroll.scrolled().subscribe(() => this.updateNavbar()));
   }
