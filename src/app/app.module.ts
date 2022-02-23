@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ImgFallbackModule } from 'ngx-img-fallback';
+import { LayoutModule } from '@angular/cdk/layout';
 
 import { AngularFireModule } from '@angular/fire/compat';
 import { firebaseConfig } from 'src/environments/firebaseConfig';
@@ -18,6 +19,7 @@ import { firebaseConfig } from 'src/environments/firebaseConfig';
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
     ImgFallbackModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

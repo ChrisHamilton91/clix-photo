@@ -1,1 +1,23 @@
-<div class="container">NAVBAR!!</div>
+<div class="container">
+  <div class="flex-container" *ngIf="!(condensed | async)">
+    <span class="navlink-text">PORTFOLIO</span>
+    <span class="navlink-line"></span>
+    <span class="navlink-text">BIO</span>
+    <span class="flex-spacer"></span>
+    <span class="navlink-text">SHOP</span>
+    <span class="navlink-line"></span>
+    <span class="navlink-text">EVENTS</span>
+    <span class="navlink-line"></span>
+    <span class="navlink-text">CLASSES</span>
+    <span class="navlink-line"></span>
+    <span class="navlink-text">PRIVATE SHOOTS</span>
+    <span class="navlink-line"></span>
+    <span class="navlink-text">EDITORIAL CONTENT</span>
+    <span class="navlink-line"></span>
+    <span class="navlink-text login-button">SIGN UP / LOGIN</span>
+  </div>
+  <div class="flex-container" *ngIf="condensed | async">
+    <span class="flex-spacer"></span>
+    <span class="navlink-text login-button">SIGN UP / LOGIN</span>
+  </div>
+</div>

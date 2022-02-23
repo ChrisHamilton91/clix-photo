@@ -3,8 +3,38 @@
 .container {
   background-color: $navbar-gray;
   color: $font-gray;
-  font-size: 3rem;
-  padding: 10px;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: lighter;
   position: fixed;
   width: 100%;
+  border-bottom: 1px solid black;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  margin-left: 135px;
+}
+
+.navlink-line {
+  border-left: 1px solid $font-gray;
+  display: inline-block;
+  height: 2rem;
+  margin: 0 16px;
+}
+
+.navlink-text {
+  cursor: pointer;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.login-button {
+  background-color: $accent-yellow;
+  padding: 6px 10px;
+  border-radius: 8px;
+  color: $font-black;
 }
