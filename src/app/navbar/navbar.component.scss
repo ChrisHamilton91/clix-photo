@@ -29,7 +29,7 @@ $logo-left: 32px;
   width: $logo-size;
   height: $logo-size;
   border-radius: 50%;
-  box-shadow: 0 0 2px 2px black inset, 2px 2px 6px black;
+  box-shadow: 2px 2px 6px black;
   overflow: hidden;
   cursor: pointer;
   transition: left 1s, transform 1s;
@@ -41,7 +41,7 @@ $logo-left: 32px;
 }
 
 .logo {
-  width: 100%;
+  width: calc(#{$logo-size} + 0.2rem);
 }
 
 .flex-container {

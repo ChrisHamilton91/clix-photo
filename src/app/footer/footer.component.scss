@@ -3,6 +3,32 @@
 .container {
   background-color: $navbar-gray;
   color: $font-gray;
-  font-size: 3rem;
-  padding: 10px;
+  padding: 16px 9vw;
+  display: flex;
+  align-items: center;
+}
+
+tr {
+  height: 1.6rem;
+}
+
+col.spacer {
+  width: 8px;
+}
+
+a {
+  color: $accent-yellow;
+}
+
+.flex-spacer {
+  flex-grow: 1;
+}
+
+.social-icon {
+  width: 5rem;
+  border-radius: 30%;
+}
+
+.social-icons-spacer {
+  width: 40px;
 }
