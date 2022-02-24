@@ -3,7 +3,7 @@
 .container {
   background-color: $navbar-gray;
   color: $font-gray;
-  padding: 16px 9vw;
+  padding: 18px 9vw 12px 9vw;
   display: flex;
   align-items: center;
 }
@@ -25,8 +25,10 @@ a {
 }
 
 .social-icon {
-  width: 5rem;
+  width: 4.5rem;
   border-radius: 30%;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .social-icons-spacer {

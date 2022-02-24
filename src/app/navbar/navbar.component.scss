@@ -1,6 +1,7 @@
 @import "../../variables.scss";
 
 .container {
+  z-index: 99;
   background-color: $navbar-gray;
   color: $font-gray;
   padding: 16px;
