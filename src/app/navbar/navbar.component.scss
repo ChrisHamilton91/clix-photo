@@ -77,3 +77,9 @@ $logo-left: 32px;
   border-radius: 8px;
   color: $font-black;
 }
+
+.login-button.small {
+  font-size: 0.5rem;
+  border-radius: 4px;
+  padding: 3px 5px;
+}

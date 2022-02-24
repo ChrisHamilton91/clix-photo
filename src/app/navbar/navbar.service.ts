@@ -6,6 +6,7 @@ import { BehaviorSubject, Subject } from 'rxjs';
 })
 export class NavbarService {
   readonly transparent$ = new Subject<boolean>();
+  readonly hidden$ = new Subject<boolean>();
 
   constructor() {}
 }

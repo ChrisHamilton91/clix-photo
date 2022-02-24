@@ -2,6 +2,7 @@ import { ScrollDispatcher } from '@angular/cdk/scrolling';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { NavbarService } from '../navbar/navbar.service';
+import { BreakpointService } from '../services/breakpoint.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   constructor(
     private scroll: ScrollDispatcher,
-    private navbar: NavbarService
+    private navbar: NavbarService,
+    private bps: BreakpointService
   ) {}
 
   ngOnInit(): void {
@@ -21,10 +23,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.navbar.transparent$.next(true);
     //Make navbar appear when scrolled down far enough
     this.subs.add(this.scroll.scrolled().subscribe(() => this.updateNavbar()));
+    //Hide navbar on condensed layout
+    this.subs.add(
+      this.bps.condensed$.subscribe((value) => this.navbar.hidden$.next(value))
+    );
   }
 
   ngOnDestroy(): void {
     this.navbar.transparent$.next(false);
+    this.navbar.hidden$.next(false);
     this.subs.unsubscribe();
   }
 

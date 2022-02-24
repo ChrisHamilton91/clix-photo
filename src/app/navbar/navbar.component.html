@@ -1,33 +1,38 @@
-<div class="container" [class.transparent]="transparent">
-  <div class="logo-container" [class.hidden]="transparent">
-    <img
-      class="logo"
-      src="https://storage.googleapis.com/clixphoto-assets/round-eye-logo.jpg"
-      src-fallback="assets/round-eye-logo.jpg"
-    />
-  </div>
-  <!-- Desktop -->
-  <div class="flex-container" *ngIf="!(condensed$ | async)">
-    <span class="navlink-text">PORTFOLIO</span>
-    <span class="navlink-line" [class.dark]="transparent"></span>
-    <span class="navlink-text">BIO</span>
-    <span class="flex-spacer"></span>
-    <span class="navlink-text">SHOP</span>
-    <span class="navlink-line" [class.dark]="transparent"></span>
-    <span class="navlink-text">EVENTS</span>
-    <span class="navlink-line" [class.dark]="transparent"></span>
-    <span class="navlink-text">CLASSES</span>
-    <span class="navlink-line" [class.dark]="transparent"></span>
-    <span class="navlink-text">PRIVATE SHOOTS</span>
-    <span class="navlink-line" [class.dark]="transparent"></span>
-    <span class="navlink-text">EDITORIAL CONTENT</span>
-    <span class="navlink-line" [class.dark]="transparent"></span>
-    <span class="navlink-text login-button">SIGN UP / LOGIN</span>
-  </div>
+<div class="container" [class.transparent]="transparent || navbarHidden">
+  <ng-container *ngIf="!navbarHidden">
+    <!-- Logo -->
+    <div class="logo-container" [class.hidden]="transparent">
+      <img
+        class="logo"
+        src="https://storage.googleapis.com/clixphoto-assets/round-eye-logo.jpg"
+        src-fallback="assets/round-eye-logo.jpg"
+      />
+    </div>
+    <!-- Desktop Layout -->
+    <div class="flex-container" *ngIf="!(condensed$ | async)">
+      <span class="navlink-text">PORTFOLIO</span>
+      <span class="navlink-line" [class.dark]="transparent"></span>
+      <span class="navlink-text">BIO</span>
+      <span class="flex-spacer"></span>
+      <span class="navlink-text">SHOP</span>
+      <span class="navlink-line" [class.dark]="transparent"></span>
+      <span class="navlink-text">EVENTS</span>
+      <span class="navlink-line" [class.dark]="transparent"></span>
+      <span class="navlink-text">CLASSES</span>
+      <span class="navlink-line" [class.dark]="transparent"></span>
+      <span class="navlink-text">PRIVATE SHOOTS</span>
+      <span class="navlink-line" [class.dark]="transparent"></span>
+      <span class="navlink-text">EDITORIAL CONTENT</span>
+      <span class="navlink-line" [class.dark]="transparent"></span>
+      <span class="navlink-text login-button">SIGN UP / LOGIN</span>
+    </div>
+  </ng-container>
 
-  <!-- Condensed -->
-  <div class="flex-container" *ngIf="condensed$ | async">
+  <!-- Condensed or Navbar Hidden Layout -->
+  <div class="flex-container" *ngIf="(condensed$ | async) || navbarHidden">
     <span class="flex-spacer"></span>
-    <span class="navlink-text login-button">SIGN UP / LOGIN</span>
+    <span class="navlink-text login-button" [class.small]="navbarHidden"
+      >SIGN UP / LOGIN</span
+    >
   </div>
 </div>
