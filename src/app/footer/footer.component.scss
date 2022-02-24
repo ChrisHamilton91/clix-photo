@@ -8,8 +8,12 @@
   align-items: center;
 }
 
+.container.downscaled {
+  font-size: 0.6rem;
+}
+
 tr {
-  height: 1.6rem;
+  height: 1.6em;
 }
 
 col.spacer {
@@ -25,12 +29,12 @@ a {
 }
 
 .social-icon {
-  width: 4.5rem;
+  width: 4.5em;
   border-radius: 30%;
   pointer-events: auto;
   cursor: pointer;
 }
 
 .social-icons-spacer {
-  width: 40px;
+  width: 3em;
 }

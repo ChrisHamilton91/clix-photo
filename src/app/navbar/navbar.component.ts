@@ -12,6 +12,7 @@ import { NavbarService } from './navbar.service';
 export class NavbarComponent implements OnInit, OnDestroy {
   subs = new Subscription();
   condensed$ = new Observable();
+  downscaled$ = new Observable();
   transparent = false;
   navbarHidden = false;
 
@@ -23,6 +24,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.condensed$ = this.bps.condensed$;
+    this.downscaled$ = this.bps.downscaled$;
 
     this.subs.add(
       this.navbar.transparent$.subscribe((value) => {

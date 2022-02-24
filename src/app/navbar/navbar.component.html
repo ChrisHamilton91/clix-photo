@@ -31,7 +31,9 @@
   <!-- Condensed or Navbar Hidden Layout -->
   <div class="flex-container" *ngIf="(condensed$ | async) || navbarHidden">
     <span class="flex-spacer"></span>
-    <span class="navlink-text login-button" [class.small]="navbarHidden"
+    <span
+      class="navlink-text login-button"
+      [class.downscaled]="downscaled$ | async"
       >SIGN UP / LOGIN</span
     >
   </div>

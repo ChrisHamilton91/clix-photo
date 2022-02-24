@@ -10,5 +10,9 @@ export class BreakpointService {
     .observe('(max-width: 70rem)')
     .pipe(map((state) => state.matches));
 
+  downscaled$ = this.breakpointObserver
+    .observe('(max-width: 40rem)')
+    .pipe(map((state) => state.matches));
+
   constructor(private breakpointObserver: BreakpointObserver) {}
 }
