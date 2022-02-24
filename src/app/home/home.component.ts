@@ -1,6 +1,6 @@
 import { ScrollDispatcher } from '@angular/cdk/scrolling';
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { NavbarService } from '../navbar/navbar.service';
 import { BreakpointService } from '../services/breakpoint.service';
 
@@ -11,6 +11,7 @@ import { BreakpointService } from '../services/breakpoint.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   subs = new Subscription();
+  downscaled$ = new Observable();
 
   constructor(
     private scroll: ScrollDispatcher,
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    this.downscaled$ = this.bps.downscaled$;
     //Navbar transparent at first
     this.navbar.transparent$.next(true);
     //Make navbar appear when scrolled down far enough
