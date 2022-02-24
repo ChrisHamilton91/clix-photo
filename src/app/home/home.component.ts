@@ -11,6 +11,7 @@ import { BreakpointService } from '../services/breakpoint.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   subs = new Subscription();
+  condensed$ = new Observable();
   downscaled$ = new Observable();
 
   constructor(
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    this.condensed$ = this.bps.condensed$;
     this.downscaled$ = this.bps.downscaled$;
     //Navbar transparent at first
     this.navbar.transparent$.next(true);
